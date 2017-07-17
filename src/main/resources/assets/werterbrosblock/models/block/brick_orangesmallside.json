@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "up": "werterbrosblock:blocks/brick_orangesmalltopornate","down": "werterbrosblock:blocks/brick_orangesmalltopornate","north": "werterbrosblock:blocks/brick_orangesmallside","east": "werterbrosblock:blocks/brick_orangesmallside","south": "werterbrosblock:blocks/brick_orangesmallside","west": "werterbrosblock:blocks/brick_orangesmallside","particle": "werterbrosblock:blocks/brick_orangesmalltopornate"
+    }
+}

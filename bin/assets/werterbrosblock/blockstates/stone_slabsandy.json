@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "half=bottom": { "model": "werterbrosblock:stone_slabsandy" },
+        "half=top": { "model": "werterbrosblock:stone_slabsandy" }
+    }
+}

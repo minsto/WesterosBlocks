@@ -1,0 +1,99 @@
+package com.mickdev.wm.init;
+
+import com.mickdev.wm.References;
+
+import com.mickdev.wm.werterbrosblock;
+import net.minecraft.client.renderer.ItemModelMesher;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+public class ModItems {
+    public static Item.ToolMaterial toolMaterial = EnumHelper
+            .addToolMaterial(References.RESOURCE_PREFIX + "tut_mat", 4, 2048, 10.0f, 4.0f, 16);
+
+
+    public static tutologo tutologo;
+
+    public static void init() {
+
+        tutorialItem = new ItemTutorial();
+        done AFTER setting the registry name.
+        GameRegistry.register(tutologo);
+
+
+    }
+
+    /**
+     * Here we should call the addRecipes method for all items that have one. Should be called during the init phase.
+     */
+
+    /**
+     * The client-side initializer. Here we handle model registration. Note the @SideOnly annotation. This causes the
+     * method to exist only on the client-side, preventing servers from crashing.
+     *
+     * This should be called during init, calling during preInit will crash.
+     */
+    @SideOnly(Side.CLIENT)
+    public static void initClient(ItemModelMesher mesher) {
+
+        // Create a MRL for the model. Note we have two parameters and the second must be "inventory". We can reuse this
+        // variable for each item of course, since most Java variables just contain a reference to an object.
+        ModelResourceLocation model = new ModelResourceLocation(
+                References.RESOURCE_PREFIX + Names.tutologo, "inventory");
+        // Here we list all models the item can possibly have. An array will work, or just list each MRL for the final
+        // parameters.
+        ModelLoader.registerItemVariants(tutologo, model);
+        // Finally, we associate each MRL (model) with different metadata values for the item. This must be called for each
+        // variant! And even if the variants don't depend on metadata, I believe each variant must be registered to a unique
+        // meta... In this case, there are no other variants, so we just pass in a metadata of zero.
+        mesher.register(tutologo, 0, model);
+
+
+    }
+
+    /**
+     * Helper method to make item registration more compact.
+     *
+     * @param item
+     *          The new item to register.
+     * @param name
+     *          The name for the item (prepends the resource prefix automatically).
+     * @return item
+     * @since Episode 7
+     */
+    protected static <T extends Item> T register(T item, String name) {
+
+        item.setRegistryName(new ResourceLocation(References.MODID, name));
+        GameRegistry.register(item);
+        item.setCreativeTab(werterbrosblock.Web);
+        item.setUnlocalizedName(References.RESOURCE_PREFIX + name);
+        return item;
+    }
+
+    /**
+     * Helper method to make model registration more compact.
+     *
+     * @param mesher
+     *          The ItemModelMesher passed into initClient.
+     * @param item
+     *          The item you are registering models for.
+     * @param name
+     *          The item name (same one used in register).
+     * @since Episode 7
+     */
+    @SideOnly(Side.CLIENT)
+    protected static void registerModel(ItemModelMesher mesher, Item item, String name) {
+
+        ModelResourceLocation model = new ModelResourceLocation(References.RESOURCE_PREFIX + name,
+                "inventory");
+        ModelLoader.registerItemVariants(item, model);
+        mesher.register(item, 0, model);
+
+    }
+}

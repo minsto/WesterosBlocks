@@ -1,0 +1,43 @@
+package com.mickdev.wm.init;
+
+import com.mickdev.wm.References;
+
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+public class ModItems {
+	public ModItems(){
+        initItems();
+        registerItems();
+        if(FMLCommonHandler.instance().getSide().isClient())
+        registerRenders();
+
+    }
+
+    public static Item tutoLogo;
+    public  void  initItems(){
+    	
+  tutoLogo = new Item().setRegistryName("tutoLogo").setUnlocalizedName("tutoLogo");
+    }
+    public void registerItems(){
+            registerItem(tutoLogo);
+    }
+
+@SideOnly(Side.CLIENT)
+    public void registerRenders(){
+        registerRender(tutoLogo,0);
+
+    }
+    private void registerItem(Item item) {
+        GameRegistry.register(item);
+    }
+    private void registerRender(Item item, int meta){
+        ModelLoader.setCustomModelResourceLocation(item,meta,new ModelResourceLocation(new ResourceLocation(References.MODID, item.getUnlocalizedName().substring(5)),"Inventory"));
+    }
+}

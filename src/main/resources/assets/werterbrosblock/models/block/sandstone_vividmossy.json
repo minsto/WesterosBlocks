@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "up": "werterbrosblock:blocks/sandstone_vividtop","down": "werterbrosblock:blocks/sandstone_vividmossytop","north": "werterbrosblock:blocks/sandstone_vividmossy","east": "werterbrosblock:blocks/sandstone_vividmossy","south": "werterbrosblock:blocks/sandstone_vividmossy","west": "werterbrosblock:blocks/sandstone_vividmossy","particle": "werterbrosblock:blocks/sandstone_vividtop"
+    }
+}

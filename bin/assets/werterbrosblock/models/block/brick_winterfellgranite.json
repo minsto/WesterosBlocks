@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "up": "werterbrosblock:blocks/brick_winterfellgranitetop","down": "werterbrosblock:blocks/brick_winterfellgranitetop","north": "werterbrosblock:blocks/brick_winterfellgranite","east": "werterbrosblock:blocks/brick_winterfellgranite","south": "werterbrosblock:blocks/brick_winterfellgranite","west": "werterbrosblock:blocks/brick_winterfellgranite","particle": "werterbrosblock:blocks/brick_winterfellgranitetop"
+    }
+}

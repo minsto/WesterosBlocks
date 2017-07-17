@@ -1,0 +1,8 @@
+package com.mickdev.wm.init;
+
+/**
+ * Created by mick64bits on 2017-07-15.
+ */
+public class Names {
+    public static final String tutologo = "Werterbros logo";
+}

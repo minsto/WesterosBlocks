@@ -1,0 +1,9 @@
+package com.mickdev.wm;
+
+public class References {
+public static final String MODID="werterbrosblock";
+public static final String NAME="WesterosBlocks";
+public static final String VERSION="1.4";
+public static final String CLIENTPROXY="com.mickdev.wm.proxy.ClientProxy";
+public static final String SERVERPROXY="com.mickdev.wm.proxy.ServerProxy";
+}

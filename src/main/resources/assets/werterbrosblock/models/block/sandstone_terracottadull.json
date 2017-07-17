@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "up": "werterbrosblock:blocks/sandstone_terracottadulltop","down": "werterbrosblock:blocks/sandstone_terracottadulltop","north": "werterbrosblock:blocks/sandstone_terracottadull","east": "werterbrosblock:blocks/sandstone_terracottadull","south": "werterbrosblock:blocks/sandstone_terracottadull","west": "werterbrosblock:blocks/sandstone_terracottadull","particle": "werterbrosblock:blocks/sandstone_terracottadulltop"
+    }
+}

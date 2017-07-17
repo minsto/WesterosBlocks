@@ -1,0 +1,20 @@
+package com.mickdev.wm.proxy;
+
+import com.mickdev.wm.init.ModBlock;
+import com.mickdev.wm.init.ModItems;
+import com.mickdev.wm.init.ModsBriks;
+import com.mickdev.wm.init.SandstoneBlock;
+
+
+
+public class CommonProxy {
+	
+public void preInit(){
+	new ModBlock();
+	ModItems.init();
+	new SandstoneBlock();
+}
+public void init(){
+	
+}
+}

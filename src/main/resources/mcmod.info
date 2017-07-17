@@ -1,0 +1,16 @@
+[
+{
+  "modid": "werterbrosblock",
+  "name": "WesterosBlocks",
+  "description": "Cosmetic Blocks",
+  "version": "1.11.2",
+  "mcversion": "1.11.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Maintened By:minsto'RealAuthor:WesterosCraft"],
+  "credits": "WesterosCraft",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
